@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário com Preenchimento de Endereço</title>
+    <title>Formulário Luna</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header></header>
-
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
     <form id="userForm">
       <section class="titles">
-        <h2>Formulário de Cadastro</h2>
-        <img src="logo.jpeg" alt="" />
+        <h2>Formulário</h2>
+        <a
+          href="https://lunaaba.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="logo.jpeg" alt="" />
+        </a>
       </section>
 
       <div class="form-row">
@@ -31,9 +40,9 @@
           <label for="sexo">Sexo:</label>
           <select id="sexo" name="sexo" required>
             <option value=""></option>
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-            <option value="outro">Prefiro não informar</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Prefiro não informar</option>
           </select>
         </div>
         <div>
@@ -52,13 +61,15 @@
           <label for="setor">Atendimento para:</label>
           <select id="setor" name="setor" required>
             <option value=""></option>
-            <option value="comportamentoProblema">
+            <option value="Comportamento Problema">
               Comportamento problema
             </option>
-            <option value="intervencao">Intervenção ABA</option>
-            <option value="fonoaudiologia">Fonoaudiologia</option>
-            <option value="domiciolio">Atendimento a domicílio</option>
-            <option value="duvidas">Dúvidas</option>
+            <option value="Intervenção ABA">Intervenção ABA</option>
+            <option value="Fonoaudiologia">Fonoaudiologia</option>
+            <option value="Atendimento a Domicíolio">
+              Atendimento a domicílio
+            </option>
+            <option value="Dúvidas">Dúvidas</option>
           </select>
         </div>
       </div>
@@ -133,18 +144,18 @@
           <label for="findUs">Conte-nos: Como nos encontrou?</label>
           <select id="findUs" name="findUs" required>
             <option value=""></option>
-            <option value="facebook">Facebook</option>
-            <option value="instagram">Instagram</option>
-            <option value="youtube">Youtube</option>
-            <option value="eventos">Eventos</option>
-            <option value="livros">Livros</option>
-            <option value="lucelmo">Lucelmo Lacerda</option>
-            <option value="aida">Aída Brito</option>
-            <option value="kelvis">Kelvis Sampaio</option>
-            <option value="felipe">Felipe Lemos</option>
-            <option value="natalie">Natalie Brito</option>
-            <option value="indicacao">Indicação</option>
-            <option value="outros">Outros</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Youtube">Youtube</option>
+            <option value="Eventos">Eventos</option>
+            <option value="Livros">Livros</option>
+            <option value="Lucelmo">Lucelmo Lacerda</option>
+            <option value="Aída">Aída Brito</option>
+            <option value="Kelvis">Kelvis Sampaio</option>
+            <option value="Felipe">Felipe Lemos</option>
+            <option value="Natalie">Natalie Brito</option>
+            <option value="Indicação">Indicação</option>
+            <option value="Outros">Outros</option>
           </select>
         </div>
       </div>
@@ -166,9 +177,7 @@
       </div>
     </form>
 
-    <footer>
-      <p>&copy; 2024 LunaABA. Todos os direitos reservados.</p>
-    </footer>
+
 
     <!-- Modal para confirmação de envio -->
     <div id="myModal" class="modal">
@@ -184,7 +193,10 @@
         </button>
       </div>
     </div>
-
+    
+    <footer>
+        <p>&copy; 2024 LunaABA. Todos os direitos reservados.</p>
+      </footer>
     <script src="script.js"></script>
   </body>
 </html>

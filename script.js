@@ -1,5 +1,5 @@
 // Função para buscar o endereço pelo CEP
-document.getElementById("cep").addEventListener("blur", function () {
+document.getElementById("cep").addEventListener("input", function () {
   const cep = this.value.replace(/\D/g, "");
   if (cep.length === 8) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -37,7 +37,7 @@ document
 
     // Envia os dados via POST para o Google Apps Script
     fetch(
-      "https://script.google.com/macros/s/AKfycbzdcuD5blFA-Qpnf3dQ_3zHg8ykX2saze3bdvzAs4zQP7gG0jvP2UOEKQHlzifDeE9t/exec",
+      "https://script.google.com/a/macros/lunaaba.com.br/s/AKfycbw7XDoruJ-KucIgKp-rX8RE3_QU5JUc9NLNmqB7kDD0vl-Y-BoWLD7QvobbCdTh1rw0Zw/exec",
       {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
