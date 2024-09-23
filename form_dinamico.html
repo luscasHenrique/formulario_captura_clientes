@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário com Preenchimento de Endereço</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <form id="userForm">
+      <section>
+        <h2>Formulário de Cadastro</h2>
+      </section>
+
+      <div class="form-row">
+        <div>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="lastname">Sobrenome:</label>
+          <input type="text" id="lastname" name="lastname" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="sexo">Sexo:</label>
+          <select id="sexo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Prefiro não informar</option>
+          </select>
+        </div>
+        <div>
+          <label for="age">Idade:</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="planosaude">Plano de sáude:</label>
+          <input type="text" id="planosaude" name="planosaude" />
+        </div>
+
+        <div>
+          <label for="setor">Atendimento para:</label>
+          <select id="setor" name="setor" required>
+            <option value=""></option>
+            <option value="comportamentoProblema">
+              Comportamento problema
+            </option>
+            <option value="intervencao">Intervenção ABA</option>
+            <option value="fonoaudiologia">Fonoaudiologia</option>
+            <option value="domiciolio">Atendimento a domicílio</option>
+            <option value="duvidas">Dúvidas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+      </div>
+
+      <div class="space"></div>
+
+      <div class="form-row">
+        <div>
+          <label for="cep">CEP:</label>
+          <input
+            type="text"
+            id="cep"
+            name="cep"
+            maxlength="9"
+            required
+            placeholder="00000-000"
+          />
+        </div>
+        <div>
+          <label for="address">Endereço:</label>
+          <input type="text" id="address" name="address" required readonly />
+        </div>
+        <div>
+          <label for="numberaddress">Nº:</label>
+          <input
+            type="number"
+            id="numberaddress"
+            name="numberaddress"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="neighborhood">Bairro:</label>
+          <input
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            required
+            readonly
+          />
+        </div>
+        <div>
+          <label for="city">Cidade:</label>
+          <input type="text" id="city" name="city" required readonly />
+        </div>
+        <div>
+          <label for="state">Estado:</label>
+          <input type="text" id="state" name="state" required readonly />
+        </div>
+      </div>
+
+      <div class="space"></div>
+      <section>
+        <h2>Como Chegou Até A Luna?</h2>
+      </section>
+      <div class="form-row">
+        <div>
+          <label for="findUs">Conte-nos: Como nos encontrou?</label>
+          <select id="findUs" name="findUs" required>
+            <option value=""></option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="youtube">Youtube</option>
+            <option value="eventos">Eventos</option>
+            <option value="livros">Livros</option>
+            <option value="lucelmo">Lucelmo Lacerda</option>
+            <option value="aida">Aída Brito</option>
+            <option value="kelvis">Kelvis Sampaio</option>
+            <option value="felipe">Felipe Lemos</option>
+            <option value="natalie">Natalie Brito</option>
+            <option value="indicacao">Indicação</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="space"></div>
+
+      <div class="contain-button">
+        <button type="submit" class="btn enviar">
+          <strong>ENVIAR</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+
+          <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </button>
+      </div>
+    </form>
+
+    <footer>
+      <p>&copy; 2024 LunaABA. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal para confirmação de envio -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p class="modal-heading">Obrigado</p>
+        <p class="modal-description">Informações enviadas com sucesso!</p>
+        <button class="exit-button close">
+          <svg height="20px" viewBox="0 0 384 512">
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Função para buscar o endereço pelo CEP
+      document.getElementById("cep").addEventListener("blur", function () {
+        const cep = this.value.replace(/\D/g, "");
+        if (cep.length === 8) {
+          fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then((response) => response.json())
+            .then((data) => {
+              if (!("erro" in data)) {
+                document.getElementById("address").value = data.logradouro;
+                document.getElementById("neighborhood").value = data.bairro;
+                document.getElementById("city").value = data.localidade;
+                document.getElementById("state").value = data.uf;
+              } else {
+                alert("CEP não encontrado.");
+              }
+            })
+            .catch((error) => {
+              console.error("Erro ao buscar o CEP:", error);
+              alert("Erro ao buscar o CEP.");
+            });
+        }
+      });
+
+      // Modal de envio
+      const modal = document.getElementById("myModal");
+      const span = document.getElementsByClassName("close")[0];
+
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Cria um objeto com os dados do formulário
+          var formData = new FormData(this);
+          var data = {};
+          formData.forEach((value, key) => (data[key] = value));
+
+          // Envia os dados via POST para o Google Apps Script
+          fetch(
+            "https://script.google.com/macros/s/AKfycbzdcuD5blFA-Qpnf3dQ_3zHg8ykX2saze3bdvzAs4zQP7gG0jvP2UOEKQHlzifDeE9t/exec",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(data),
+            }
+          )
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Erro ao enviar os dados");
+              }
+              return response.text();
+            })
+            .then((data) => {
+              modal.style.display = "flex";
+              document.getElementById("userForm").reset();
+            })
+            .catch((error) => {
+              console.error("Erro:", error);
+              alert("Houve um problema ao enviar os dados.");
+            });
+        });
+
+      // Fecha o modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Fecha o modal clicando fora
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
